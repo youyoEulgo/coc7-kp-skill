@@ -4,12 +4,9 @@
 
 ## 这是什么
 
-一个 **Claude Code Skill**，让你在跑COC 7版团时拥有一个KP助理。它会帮你：
+一个 **Claude Code Skill**，让KP带COC团变得格外轻松。
 
-- 📝 **记录log** — 叙事风格的跑团日志
-- 🎲 **指示投骰** — 告诉你投什么骰子，你投它判
-- 🧮 **计算数值** — 伤害、SAN、奖励骰/惩罚骰
-- 📖 **查阅规则** — 规则书全文索引，随查随到
+你只需要像平时一样描述场景、告诉助理玩家做了什么。助理会自动处理角色演绎、数值计算、规则查询和日志记录——你可以专注于推进剧情和扮演NPC，不再需要一边带团一边翻规则书。
 
 ## 安装
 
@@ -20,16 +17,44 @@ mkdir -p .claude/skills
 git clone https://github.com/youyoEulgo/coc7-kp-skill.git .claude/skills/kp-assistant
 ```
 
-然后在对话中使用 `/kp-assistant` 激活，或设置为自动加载。
+### 设置自动加载（可选）
 
-## 使用
+在项目目录下的 `.claude/settings.json`（不是 `~/.claude/`）中添加：
 
+```bash
+# settings.json 的位置是：
+# your-coc-project/.claude/settings.json
 ```
-/kp-assistant 你的身份是
-/kp-assistant 规则书理智篇112行是什么
-/kp-assistant 有玩家打算说服一把锁让它自己打开时，怎么处理
-/kp-assistant 弓箭的伤害怎么算
+
+```json
+{
+  "skills": {
+    "autoLoad": ["kp-assistant"]
+  }
+}
 ```
+
+配置后每次在这个项目目录下打开新对话，skill会自动生效。
+
+如果不配置自动加载，每次对话中输入 `/kp-assistant` 手动激活也可以。
+
+## 用法
+
+配置后正常带团即可，助理会在后台自动工作：
+
+- KP描述场景 → 助理补充氛围细节，提示需要的检定
+- PL做出行动 → 助理判断对应技能、设置难度、指示投骰
+- 投完骰子 → 助理判定结果、推进演绎、记录log
+- 需要查规则 → 直接问，助理翻规则文件给出答案
+
+骰子支持两种模式：
+
+| 模式 | 说明 |
+|:----|:------|
+| **真实骰子**（默认） | 助理发指令，KP自己投，投完告诉助理判定 |
+| **自动骰子** | 告诉助理"自动骰"，由助理用bash工具roll骰判定 |
+
+日志在游戏过程中自动累积记录，保存到项目 `log/` 目录下。
 
 ## 结构
 
@@ -42,7 +67,7 @@ git clone https://github.com/youyoEulgo/coc7-kp-skill.git .claude/skills/kp-assi
     │   ├── skill-skills.md            # 48个技能定义
     │   ├── skill-sanity.md            # 理智系统
     │   ├── skill-battle.md            # 战斗流程
-    │   └── ...（详见索引）
+    │   └── ...
     └── custom/
         ├── general/      # 通用自定义规则
         │   ├── skill-diaomin.md       # 刁民行为处理
@@ -53,7 +78,11 @@ git clone https://github.com/youyoEulgo/coc7-kp-skill.git .claude/skills/kp-assi
 
 ## 自定义
 
-每个模组有特有数据（怪物、NPC等）时，在 `references/custom/` 下建 `module-<模组名>/` 目录即可，不会影响通用部分。
+每个模组有特有数据时，在 `references/custom/` 下建 `module-<模组名>/` 目录即可，通用部分不受影响。
+
+## 前提
+
+建议搭配完整规则书文本（`core_rules.txt`）使用，可获得更精确的规则查询能力。skill自带的规则摘要覆盖了核心内容，但完整规则书可以提供更详细的上下文。
 
 ## 协议
 
