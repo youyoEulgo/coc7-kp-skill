@@ -1,2 +1,3 @@
 # 模组专用数据（不通用）
 references/custom/module-*/
+.DS_Store
