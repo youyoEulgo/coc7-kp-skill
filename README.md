@@ -17,7 +17,7 @@
 # 在你的COC项目目录下
 cd your-coc-project
 mkdir -p .claude/skills
-git clone git@github.com:youyoEulgo/coc7-kp-skill.git .claude/skills/kp-assistant
+git clone https://github.com/youyoEulgo/coc7-kp-skill.git .claude/skills/kp-assistant
 ```
 
 然后在对话中使用 `/kp-assistant` 激活，或设置为自动加载。
