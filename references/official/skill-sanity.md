@@ -1,6 +1,6 @@
 ---
 name: skill-sanity
-description: "COC 7版理智系统：理智检定、SAN损失表、疯狂三阶段、恐惧症与狂躁症、治疗与恢复"
+description: "COC 7版理智系统：理智检定、SAN损失表、疯狂三阶段、恐惧症与狂躁症完整列表、治疗与恢复"
 ---
 
 # Skill: CoC7_Sanity_System
@@ -20,7 +20,7 @@ description: "COC 7版理智系统：理智检定、SAN损失表、疯狂三阶�
 * 施放或目击法术
 * 进行理智检定
 * 判定临时性疯狂
-* 判定不定期疯狂
+* 判定不定性疯狂
 * 判定永久性疯狂
 * 处理恐惧症/狂躁症
 * 处理理智恢复与治疗
@@ -163,12 +163,12 @@ description: "COC 7版理智系统：理智检定、SAN损失表、疯狂三阶�
 | 9 | **恐惧**（永久）— 永久获得一项恐惧症 |
 | 10 | **狂躁**（永久）— 永久获得一项狂躁症 |
 
-## 不定期疯狂
+## 不定性疯狂
 
 ```text
 条件：
-  在幕间成长阶段，若调查员的克苏鲁神话技能 ≥ 当前理智值
-  或守秘人判定调查员经历的精神创伤足够严重
+  在游戏中的一天内，失去了 1/5 或更多的理智值
+  或在幕间成长阶段，克苏鲁神话技能 ≥ 当前理智值
 
 表现：
   调查员已陷入潜在疯狂
@@ -195,34 +195,152 @@ description: "COC 7版理智系统：理智检定、SAN损失表、疯狂三阶�
 ## 获得恐惧症/狂躁症
 
 ```text
-在不定期疯狂阶段或临时疯狂后：
+在不定性疯狂阶段或临时疯狂后：
   守秘人可决定调查员获得一项恐惧症或狂躁症
   从恐惧症表中随机决定，或由守秘人选择适合剧情的
 ```
 
-## 常见恐惧症示例
+## 表Ⅸ：恐惧症状表
+
+恐惧症是对某些事物的持久性恐惧。守秘人可以投D100随机选择，也可以直接选择一个恰当的症状。
+
+守秘人应将恐惧症的症状添加到调查员的背景故事栏中。
 
 ```text
-恐惧症（Phobia）：
-  黑暗恐惧症（Nyctophobia）——惧怕黑暗
-  幽闭恐惧症（Claustrophobia）——惧怕密闭空间
-  恐高症（Acrophobia）——惧怕高处
-  社交恐惧症（Anthropophobia）——惧怕人群
-  血液恐惧症（Hemophobia）——惧怕血液
-  死亡恐惧症（Thanatophobia）——惧怕死亡
-  怪物恐惧症（Terrophobia）——惧怕怪物
+D100  恐惧症
+01    洗澡恐惧症（Ablutophobia）——对洗涤或洗澡的恐惧
+02    恐高症（Acrophobia）——对身处高处的恐惧
+03    飞行恐惧症（Aerophobia）——对飞行的恐惧
+04    广场恐惧症（Agoraphobia）——对开放（拥挤）空间的恐惧
+05    大蒜恐惧症（Alliumphobia）——对大蒜的恐惧
+06    乘车恐惧症（Amaxophobia）——对乘车的恐惧
+07    男性恐惧症（Androphobia）——对成年男性的恐惧
+08    恐英症（Anglophobia）——对英格兰或英国文化的恐惧
+09    恐花症（Anthophobia）——对花的恐惧
+10    截肢者恐惧症（Apotemnophobia）——对截肢者的恐惧
+11    蜘蛛恐惧症（Arachnophobia）——对蜘蛛的恐惧
+12    闪电恐惧症（Astraphobia）——对闪电的恐惧
+13    废墟恐惧症（Atephobia）——对废墟的恐惧
+14    长笛恐惧症（Aulophobia）——对长笛的恐惧
+15    细菌恐惧症（Bacteriophobia）——对细菌的恐惧
+16    导弹/子弹恐惧症（Ballistophobia）——对导弹或子弹的恐惧
+17    跌落恐惧症（Basophobia）——对跌倒或摔落的恐惧
+18    书籍恐惧症（Bibliophobia）——对书籍的恐惧
+19    植物恐惧症（Botanophobia）——对植物的恐惧
+20    美女恐惧症（Caligynephobia）——对美女的恐惧
+21    寒冷恐惧症（Cheimaphobia）——对寒冷的恐惧
+22    恐钟表症（Chronomentrophobia）——对钟表的恐惧
+23    幽闭恐惧症（Claustrophobia）——对封闭空间的恐惧
+24    小丑恐惧症（Coulrophobia）——对小丑的恐惧
+25    恐犬症（Cynophobia）——对狗的恐惧
+26    恶魔恐惧症（Demonophobia）——对邪灵或恶魔的恐惧
+27    人群恐惧症（Demophobia）——对人群的恐惧
+28    牙科恐惧症（Dentophobia）——对牙医的恐惧
+29    丢弃恐惧症（Disposophobia）——对丢弃物件的恐惧（贮藏癖）
+30    皮毛恐惧症（Doraphobia）——对动物皮毛的恐惧
+31    过马路恐惧症（Dromophobia）——对过马路的恐惧
+32    教堂恐惧症（Ecclesiophobia）——对教堂的恐惧
+33    镜子恐惧症（Eisoptrophobia）——对镜子的恐惧
+34    针尖恐惧症（Enetophobia）——对针或大头针的恐惧
+35    昆虫恐惧症（Entomophobia）——对昆虫的恐惧
+36    恐猫症（Felinophobia）——对猫的恐惧
+37    过桥恐惧症（Gephyrophobia）——对过桥的恐惧
+38    恐老症（Gerontophobia）——对老年人或变老的恐惧
+39    恐女症（Gynophobia）——对女性的恐惧
+40    恐血症（Haemaphobia）——对血的恐惧
+41    宗教罪行恐惧症（Hamartophobia）——对宗教罪行的恐惧
+42    触摸恐惧症（Haphophobia）——对被触摸的恐惧
+43    爬虫恐惧症（Herpetophobia）——对爬行动物的恐惧
+44    迷雾恐惧症（Homichlophobia）——对雾的恐惧
+45    火器恐惧症（Hoplophobia）——对火器的恐惧
+46    恐水症（Hydrophobia）——对水的恐惧
+47    催眠恐惧症（Hypnophobia）——对睡眠或被催眠的恐惧
+48    白袍恐惧症（Iatrophobia）——对医生的恐惧
+49    鱼类恐惧症（Ichthyophobia）——对鱼的恐惧
+50    蟑螂恐惧症（Katsaridaphobia）——对蟑螂的恐惧
+51    雷鸣恐惧症（Keraunophobia）——对雷声的恐惧
+52    蔬菜恐惧症（Lachanophobia）——对蔬菜的恐惧
+53    噪音恐惧症（Ligyrophobia）——对刺耳噪音的恐惧
+54    恐湖症（Limnophobia）——对湖泊的恐惧
+55    机械恐惧症（Mechanophobia）——对机器或机械的恐惧
+56    巨物恐惧症（Megalophobia）——对庞大物件的恐惧
+57    捆绑恐惧症（Merinthophobia）——对被捆绑或紧缚的恐惧
+58    流星恐惧症（Meteorophobia）——对流星或陨石的恐惧
+59    孤独恐惧症（Monophobia）——对一人独处的恐惧
+60    不洁恐惧症（Mysophobia）——对污垢或污染的恐惧
+61    黏液恐惧症（Myxophobia）——对黏液的恐惧
+62    尸体恐惧症（Necrophobia）——对尸体的恐惧
+63    数字8恐惧症（Octophobia）——对数字8的恐惧
+64    恐牙症（Odontophobia）——对牙齿的恐惧
+65    恐梦症（Oneirophobia）——对梦境的恐惧
+66    称呼恐惧症（Onomatophobia）——对特定词语或名字的恐惧
+67    恐蛇症（Ophidiophobia）——对蛇的恐惧
+68    恐鸟症（Ornithophobia）——对鸟的恐惧
+69    寄生虫恐惧症（Parasitophobia）——对寄生虫的恐惧
+70    人偶恐惧症（Pediophobia）——对人偶的恐惧
+71    吞咽恐惧症（Phagophobia）——对吞咽或被吞咽的恐惧
+72    药物恐惧症（Pharmacophobia）——对药物的恐惧
+73    幽灵恐惧症（Phasmophobia）——对鬼魂的恐惧
+74    日光恐惧症（Phenogophobia）——对日光的恐惧
+75    胡须恐惧症（Pogonophobia）——对胡须的恐惧
+76    河流恐惧症（Potamophobia）——对河流的恐惧
+77    酒精恐惧症（Potophobia）——对酒或酒精的恐惧
+78    恐火症（Pyrophobia）——对火的恐惧
+79    魔法恐惧症（Rhabdophobia）——对魔法的恐惧
+80    黑暗恐惧症（Scotophobia）——对黑暗或夜晚的恐惧
+81    恐月症（Selenophobia）——对月亮的恐惧
+82    火车恐惧症（Siderodromophobia）——对乘坐火车出行的恐惧
+83    恐星症（Siderophobia）——对星星的恐惧
+84    狭室恐惧症（Stenophobia）——对狭小物件或地点的恐惧
+85    对称恐惧症（Symmetrophobia）——对对称的恐惧
+86    活埋恐惧症（Taphephobia）——对被活埋或墓地的恐惧
+87    恐蛛症（Arachnophobia）——对蜘蛛的恐惧
+88    雷电恐惧症（Astraphobia）——对雷电的恐惧
+89    创伤恐惧症（Traumatophobia）——对受伤或创伤的恐惧
+90    烟雾恐惧症（Cremnophobia）——对悬崖或陡坡的恐惧
+91    恐雷症（Ceraunophobia）——对雷电的恐惧
+92    吸血鬼恐惧症（Sanguinivorophobia）——对吸血鬼的恐惧
+93    游泳恐惧症（Aquaphobia）——对游泳或溺水的恐惧
+94    黑暗恐惧症（Nyctophobia）——对黑暗的恐惧
+95    异教恐惧症（Allodoxaphobia）——对意见或决定的恐惧
+96    陌生人恐惧症（Xenophobia）——对陌生人的恐惧
+97    动物恐惧症（Zoophobia）——对动物的恐惧
+98    刀具恐惧症（Aichmophobia）——对刀或尖锐物体的恐惧
+99    死亡恐惧症（Thanatophobia）——对死亡的恐惧
+00    恐惧症恐惧症（Phobophobia）——对恐惧本身的恐惧
 ```
 
-## 常见狂躁症示例
+## 表Ⅹ：狂躁症状表
+
+狂躁症是一种精神状态的亢奋或强迫性行为。守秘人可以投D100随机选择，也可以直接选择一个恰当的症状。
+
+守秘人应将狂躁症的症状添加到调查员的背景故事栏中。
 
 ```text
-狂躁症（Mania）：
-  清洁狂（Mysophobia）——强迫性清洁
-  盗窃狂（Kleptomania）——强迫性偷窃
-  妄想狂（Paranoia）——被迫害妄想
-  仪式狂（Arithmomania）——强迫性计数
-  疑病狂（Hypochondria）——疑病症
+D100  狂躁症
+01    清洁狂（Mysophobia/Cainophobia）——强迫性清洁
+02    盗窃狂（Kleptomania）——强迫性偷窃
+03    妄想狂（Paranoia）——被迫害妄想
+04    仪式狂（Arithmomania）——强迫性计数
+05    疑病狂（Hypochondria）——疑病症
+06    自大狂（Megalomania）——自大妄想
+07    纵火狂（Pyromania）——纵火冲动
+08    赌博狂（Gambling）——强迫性赌博
+09    暴食狂（Bulimia）——暴食冲动  
+10    拔毛狂（Trichotillomania）——拔自己头发的冲动
+11    嗜杀狂（Homocidal Mania）——杀人冲动
+12    囤积狂（Disposophobia）——强迫性囤积
+13    说谎狂（Pseudomania）——强迫性说谎
+14    酗酒狂（Dipsomania）——酗酒冲动
+15    性瘾狂（Nymphomania/Satyriasis）——性冲动失控
+16    异食狂（Pica）——食用非食物物质的冲动
+17    工作狂（Ergomania）——强迫性工作
+18    购物狂（Oniomania）——强迫性购物
+19    宗教狂（Hieromania）——宗教狂热
+20    权力狂（Cratomania）——对权力的执念
 ```
+
+守秘人也可自行设计符合剧情的恐惧症或狂躁症。恐惧症角色会通过一切手段逃避恐惧源；狂躁症角色会沉浸于其狂躁症状的表现中。
 
 ---
 
